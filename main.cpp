@@ -5,6 +5,7 @@
 #include "dominios.h"
 #include "intefaces.h"
 #include "controladorasapresentacao.h"
+#include "controladorasservico.h"
 #include "stubs.h"
 
 using namespace std;
@@ -21,24 +22,21 @@ int main()
     cntrApresentacaoParticipante = new CntrApresentacaoParticipante();
     cntrApresentacaoPeca = new CntrApresentacaoPeca();
 
-    IServicoAutenticacao *stubServicoAutenticacao;
-    IServicoParticipante *stubServicoParticipante;
-    IServicoPeca *stubServicoPeca;
+    IServicoAutenticacao *cntrServicoAutenticacao;
+    IServicoParticipante *cntrServicoParticipante;
+    IServicoPeca *cntrServicoPeca;
 
-    stubServicoAutenticacao = new StubServicoAutenticacao();
-    stubServicoParticipante = new StubServicoParticipante();
-    stubServicoPeca = new StubServicoPeca();
+    cntrServicoAutenticacao = new CntrServicoAutenticacao();
+    cntrServicoParticipante = new CntrServicoParticipante();
+    cntrServicoPeca = new CntrServicoPeca();
 
     cntrApresentacaoControle->setCntrApresentacaoAutenticacao(cntrApresentacaoAutenticacao);
     cntrApresentacaoControle->setCntrApresentacaoParticipante(cntrApresentacaoParticipante);
     cntrApresentacaoControle->setCntrApresentacaoPeca(cntrApresentacaoPeca);
 
-    cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(stubServicoAutenticacao);
-
-    cntrApresentacaoParticipante->setCntrServicoParticipante(stubServicoParticipante);
-
-
-    cntrApresentacaoPeca->setCntrServicoPeca(stubServicoPeca);
+    cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(cntrServicoAutenticacao);
+    cntrApresentacaoParticipante->setCntrServicoParticipante(cntrServicoParticipante);
+    cntrApresentacaoPeca->setCntrServicoPeca(cntrServicoPeca);
 
     cntrApresentacaoControle->executar();
 

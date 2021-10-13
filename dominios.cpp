@@ -593,7 +593,7 @@ void Telefone::validar(string telefone){
     int tamanho_codigo = codigo.size();
 
     int flag_codigo = 0;
-    for(int i; i < tamanho_codigo; i++){
+    for(int i = 0; i < tamanho_codigo; i++){
         if(preFixo == codigo[i]){
             flag_codigo++;
         }
@@ -712,7 +712,7 @@ void Data::setValor(string valor){
 
 void Email::validar(string email){
 
-    int posicao;
+    int posicao = 0;
     int tamanho_email = email.size();
 
     for(int i = 0; i < tamanho_email; i++){

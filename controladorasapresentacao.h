@@ -1,10 +1,6 @@
 #ifndef CONTROLADORASAPRESENTACAO_H_INCLUDED
 #define CONTROLADORASAPRESENTACAO_H_INCLUDED
 
-#include <conio.h>
-#include <iostream>
-#include <string.h>
-
 #include "dominios.h"
 #include "entidades.h"
 #include "intefaces.h"
@@ -53,7 +49,6 @@ inline void CntrApresentacaoAutenticacao::setCntrServicoAutenticacao(IServicoAut
 class CntrApresentacaoParticipante:public IApresentacaoParticipante{
 private:
     IServicoParticipante *cntrServicoParticipante;
-    void consultarDadosPessoais();
 public:
     void executar(Matricula);
     void cadastrar();
@@ -68,8 +63,16 @@ inline void CntrApresentacaoParticipante::setCntrServicoParticipante(IServicoPar
 class CntrApresentacaoPeca:public IApresentacaoPeca{
 private:
     IServicoPeca *cntr;
+
     void consultarPeca();
     void cadastrarPeca();
+
+    void consultarSessao();
+    void cadastrarSessao();
+
+    void consultarSala();
+    void cadastrarSala();
+
 public:
     void executar();
     void executar(Matricula);

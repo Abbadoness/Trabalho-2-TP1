@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Trab2.cbp" />
+		<Unit filename="containers.cpp" />
+		<Unit filename="containers.h" />
 		<Unit filename="controladorasapresentacao.cpp" />
 		<Unit filename="controladorasapresentacao.h" />
 		<Unit filename="controladorasservico.cpp" />
@@ -43,12 +45,6 @@
 		<Unit filename="entidades.h" />
 		<Unit filename="intefaces.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="stubs.cpp" />
-		<Unit filename="stubs.h" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

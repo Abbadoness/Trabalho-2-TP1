@@ -40,13 +40,34 @@ public:
 class IServicoParticipante{
 public:
     virtual bool cadastrarParticipante(Participante) = 0;
+    virtual bool editarParticipante(Participante) = 0;
+    virtual bool excluirParticipante(Participante) = 0;
+    virtual bool excluirParticipanteM(Matricula) = 0;
+    virtual bool mostrar(Matricula) = 0;
     virtual ~IServicoParticipante(){}
 };
 
 class IServicoPeca{
 public:
+
+    //virtual bool listarPeca() = 0;
     virtual bool cadastrarPeca(Peca) = 0;
-    virtual bool consultarPeca(Peca*) = 0;
+    virtual bool editarPeca(Peca) = 0;
+    virtual Peca consultarPeca(Peca) = 0;
+    virtual bool excluirPeca(Codigo) = 0;
+
+    virtual bool listarSala() = 0;
+    virtual bool cadastrarSala(Sala) = 0;
+    virtual bool editarSala(Sala) = 0;
+    virtual Sala consultarSala(Sala) = 0;
+    virtual bool excluirSala(Codigo) = 0;
+
+    virtual bool listarSessao() = 0;
+    virtual bool cadastrarSessao(Sessao) = 0;
+    virtual bool editarSessao(Sessao) = 0;
+    virtual Sessao consultarSessao(Sessao) = 0;
+    virtual bool excluirSessao(Codigo) = 0;
+
     virtual ~IServicoPeca(){}
 };
 
